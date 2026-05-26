@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package message;
+
+option go_package = "github.com/bottomhalf/btc-grpc-shared/genproto/message";
+
+service MessageProcessor {
+  rpc ProcessEvent(WsEventRequest) returns (WsEventResponse);
+}
+
+message WsEventRequest {
+  string event = 1;
+  bytes payload = 2;
+  string user_id = 3;
+}
+
+message WsEventResponse {
+  bool success = 1;
+  string error = 2;
+}
