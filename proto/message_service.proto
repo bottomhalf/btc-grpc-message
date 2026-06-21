@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package message;
 
-option go_package = "github.com/bottomhalf/btc-grpc-shared/genproto/message";
+option go_package = "github.com/bottomhalf/btc-grpc-message/genproto/message";
 
 service MessageProcessor {
   rpc ProcessEvent(WsEventRequest) returns (WsEventResponse);
